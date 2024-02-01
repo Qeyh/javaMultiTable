@@ -12,7 +12,7 @@ steps:
   inputs:
     command: 'build'
     dockerfile: '**/Dockerfile'
-    tags: 'multitabledary'
+    tags: 'multitabledary2'
 
 - task: Docker@2
   displayName: 'Login to Docker Hub'
@@ -22,7 +22,7 @@ steps:
     username: '$(dockerhub_username)'
     password: '$(dockerhub_password)'
 
-- script: docker tag multitabledary winterzone2/javamultiplicationtable:v1
+- script: docker tag multitabledary2 winterzone2/javamultiplicationtable:v1
   displayName: 'Tag Docker Image'
 
 - script: docker push winterzone2/javamultiplicationtable:v1
